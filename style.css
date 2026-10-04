@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Rajdhani:wght@400;500;600;700&display=swap');
+
+:root{
+  --bg:#06070b; --panel:#0d1018; --line:#202737; --text:#eef3ff;
+  --muted:#8992a6; --cyan:#00eaff; --pink:#ff2bd6; --green:#6cff9a;
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 80% 10%,#17102a 0,transparent 32%),radial-gradient(circle at 15% 30%,#06242b 0,transparent 28%),var(--bg);color:var(--text);font-family:Rajdhani,Arial,sans-serif;font-size:18px}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(#ffffff03 1px,transparent 1px),linear-gradient(90deg,#ffffff03 1px,transparent 1px);background-size:42px 42px;z-index:-1}
+.scanlines{position:fixed;inset:0;pointer-events:none;background:linear-gradient(transparent 50%,#ffffff03 51%);background-size:100% 4px;z-index:10;opacity:.25}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between;padding:0 7%;border-bottom:1px solid var(--line);background:#06070bd9;backdrop-filter:blur(12px);position:sticky;top:0;z-index:20}
+.logo{font:800 26px Orbitron;text-decoration:none;color:white;letter-spacing:2px}.logo span{color:var(--cyan)}
+nav{display:flex;gap:30px}nav a{color:#aeb7c9;text-decoration:none;font-weight:600}nav a:hover{color:var(--cyan)}
+.menu{display:none;background:none;border:0;color:white;font-size:25px}
+.hero{min-height:calc(100vh - 74px);padding:80px 7%;display:grid;grid-template-columns:1.4fr .8fr;gap:60px;align-items:center}
+.eyebrow{color:var(--cyan);font:600 13px Orbitron;letter-spacing:3px}
+h1,h2,h3{font-family:Orbitron;margin:0 0 20px}h1{font-size:clamp(42px,7vw,82px);line-height:1.08}h1 span,h2 span{color:var(--cyan);text-shadow:0 0 24px #00eaff66}
+h2{font-size:clamp(32px,5vw,55px)}.lead{max-width:650px;color:#aeb7c9;font-size:23px;line-height:1.5}
+.actions{display:flex;gap:15px;margin-top:34px;flex-wrap:wrap}.btn{padding:14px 23px;text-decoration:none;font-family:Orbitron;font-size:13px;font-weight:700;letter-spacing:1px;border:1px solid var(--cyan);transition:.2s}.primary{background:var(--cyan);color:#041016;box-shadow:0 0 28px #00eaff33}.ghost{color:var(--cyan)}.btn:hover{transform:translateY(-3px);box-shadow:0 0 28px #00eaff66}
+.hero-card,.panel,.game-card{background:linear-gradient(145deg,#111622dd,#090b11dd);border:1px solid var(--line);position:relative;overflow:hidden}
+.hero-card{padding:35px;clip-path:polygon(0 0,94% 0,100% 12%,100% 100%,6% 100%,0 88%);box-shadow:0 0 50px #00eaff0d}.status-dot{width:11px;height:11px;background:var(--green);border-radius:50%;box-shadow:0 0 15px var(--green);display:inline-block;margin-right:10px}.card-label{color:var(--muted);font:12px Orbitron;letter-spacing:2px}.hero-card h2{font-size:30px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);margin-top:30px;padding-top:25px;gap:10px}.stats b{display:block;font:700 22px Orbitron;color:var(--cyan)}.stats small{color:var(--muted)}
+.section{padding:110px 7%;max-width:1400px;margin:auto}.grid.two{display:grid;grid-template-columns:1fr 1fr;gap:25px}.panel{padding:30px;line-height:1.6}.muted{color:var(--muted)}.terminal{font-family:monospace;color:#cdd5e5}.green{color:var(--green)}.cyan{color:var(--cyan)}
+.game-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.game-card{padding:30px;transition:.25s}.game-card:hover{transform:translateY(-7px);border-color:var(--cyan);box-shadow:0 15px 40px #00eaff12}.icon{font-size:35px;margin-bottom:20px}.game-card h3{font-size:20px}.game-card p{color:var(--muted);line-height:1.5}
+.contact{text-align:center}.contact .muted{margin-bottom:30px}.socials{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}.socials a{border:1px solid var(--line);padding:12px 20px;color:var(--text);text-decoration:none}.socials a:hover{border-color:var(--pink);color:var(--pink)}
+footer{text-align:center;padding:30px;border-top:1px solid var(--line);color:#596276;font:11px Orbitron;letter-spacing:2px}
+@media(max-width:760px){.nav{padding:0 5%}nav{display:none}.menu{display:block}.hero{grid-template-columns:1fr;padding:65px 5%;gap:35px}.section{padding:80px 5%}.grid.two,.game-grid{grid-template-columns:1fr}h1{font-size:43px}.lead{font-size:20px}.hero-card{padding:25px}}
